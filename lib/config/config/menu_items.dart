@@ -18,13 +18,13 @@ const menuItems = <MenuItems>[
   MenuItems(
     title: 'Home',
     subtitle: 'Go to home screen',
-    link: '/home',
+    link: '/buttons',
     icon: Icons.smart_button_outlined,
   ),
   MenuItems(
     title: 'Profile',
     subtitle: 'View your profile',
-    link: '/profile',
+    link: '/cards',
     icon: Icons.credit_card_outlined,
   ),
 ];

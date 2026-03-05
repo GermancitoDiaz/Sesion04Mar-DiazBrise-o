@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:widget_diazbriseno/config/config/menu_items.dart';
-import 'package:widget_diazbriseno/presentation/buttons/buttons_screen.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  static const String name = 'home_screen';
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Flutter + Material 3')),
-      body: const _HomeView(),
+      body: _HomeView(),
     );
   }
 }
@@ -43,9 +44,8 @@ class _CustomListTitle extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
       onTap: () {
-        Navigator.of(
-          context,
-        ).push(MaterialPageRoute(builder: (context) => const ButtonsScreen()));
+        
+        context.push(menuItem.link);
       },
     );
   }

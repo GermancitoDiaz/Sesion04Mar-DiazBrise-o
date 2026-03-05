@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:widget_diazbriseno/config/router/app_router.dart';
 import 'package:widget_diazbriseno/config/theme/app_theme.dart';
-import 'package:widget_diazbriseno/presentation/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,10 +11,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 3).themeData(),
-      home: HomeScreen(),
+      theme: AppTheme(selectedColor: 0).themeData(),
+      routerConfig: appRouter,
     );
   }
 }
